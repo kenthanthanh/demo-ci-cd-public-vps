@@ -30,5 +30,13 @@ jobs:
       - name: Step 3 Check if Node.js is installed
         run: pwd && ls -a && node -v
 
+      - name: Dung Secret cua Repo
+        run: echo "Token la ${{ secrets.MY_SECRET_NAME }}"
+      - name: Dung Variable cua Repo
+        run: echo "Port la ${{ vars.MY_VARIABLES }}"
+
+      - name: Dung Variable cua Repo voi Secret KHÔNG TỒN TẠI
+        run: echo "Port la ${{ secrets.My_SECRET }}"
+
 
 
